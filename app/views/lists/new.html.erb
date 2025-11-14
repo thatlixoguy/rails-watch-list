@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="form-container">
+    <h1>Create a New List</h1>
+
+    <%= simple_form_for @list do |f| %>
+      <%= f.input :name,
+                  placeholder: "e.g. Action Movies, Classics, Comedy...",
+                  label: "List Name" %>
+      <%= f.button :submit, "Create List", class: "btn btn-primary" %>
+      <%= link_to "Cancel", lists_path, class: "btn btn-link" %>
+    <% end %>
+  </div>
+</div>

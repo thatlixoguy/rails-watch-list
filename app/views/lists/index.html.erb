@@ -1,13 +1,26 @@
-<div class="container mt-5">
-  <h1>My Movie Lists</h1>
+<div class="banner">
+  <div class="container">
+    <h1>My Movie Lists</h1>
+    <p>Organize your favorite movies into custom lists</p>
+  </div>
+</div>
+
+<div class="container">
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <h2>All Lists</h2>
+    <%= link_to "New List", new_list_path, class: "btn btn-primary" %>
+  </div>
 
   <div class="row">
     <% @lists.each do |list| %>
-      <div class="col-md-4 mb-3">
-        <div class="card">
+      <div class="col-md-4 mb-4">
+        <div class="list-card card">
           <div class="card-body">
             <h5 class="card-title"><%= list.name %></h5>
-            <%= link_to "View Details", "#", class: "btn btn-primary" %>
+            <p class="text-muted">
+              <%= pluralize(list.movies.count, 'movie') %>
+            </p>
+            <%= link_to "View Details", list_path(list), class: "btn btn-primary btn-sm" %>
           </div>
         </div>
       </div>

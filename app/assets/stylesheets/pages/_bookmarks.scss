@@ -1,0 +1,38 @@
+.movie-card {
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+  }
+
+  .card-img-top {
+    height: 400px;
+    object-fit: cover;
+  }
+
+  .movie-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #2c3e50;
+  }
+
+  .user-comment {
+    background-color: #fff3cd;
+    border-left: 4px solid #ffc107;
+    padding: 10px;
+    border-radius: 4px;
+    font-style: italic;
+  }
+}
+
+.delete-btn {
+  width: 100%;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #c82333;
+  }
+}

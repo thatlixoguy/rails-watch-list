@@ -1,0 +1,60 @@
+.movie-card {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+  overflow: hidden;
+  height: 100%;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  }
+
+  .card-img-top {
+    height: 300px;
+    object-fit: cover;
+  }
+
+  .card-body {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .card-title {
+    font-weight: 600;
+    color: #2c3e50;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .card-text {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  .user-comment {
+    background: #f8f9fa;
+    border-left: 3px solid #3498db;
+    padding: 0.75rem;
+    margin-top: 0.5rem;
+    border-radius: 4px;
+
+    small {
+      color: #5a6c7d;
+    }
+
+    strong {
+      color: #2c3e50;
+    }
+  }
+
+  .card-footer {
+    background: #f8f9fa;
+    border-top: 1px solid #ecf0f1;
+    padding: 1rem 1.5rem;
+  }
+}
